@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\FuelType;
+use App\Models\AutoType;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
-class FuelTypesSeeder extends Seeder
+class AutoTypesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,19 +17,18 @@ class FuelTypesSeeder extends Seeder
     {
         $insert = [
             [
-                'name' => 'Gasolina',
+                'name' => 'Coche',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
-            ], [
-                'name' => 'Diésel',
+            ],
+            [
+                'name' => 'Moto',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
-            ], [
-                'name' => 'Eléctrico',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ]
+
+            ],
         ];
-        FuelType::insert($insert);
+
+        AutoType::insert($insert);
     }
 }

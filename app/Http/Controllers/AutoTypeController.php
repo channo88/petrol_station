@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AutoModel;
+use App\Models\AutoType;
 use Illuminate\Http\Request;
 
-class AutoModelController extends Controller
+class AutoTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class AutoModelController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\AutoModel $autoModel
+     * @param  \App\Models\AutoType $autoType
      * @return \Illuminate\Http\Response
      */
-    public function show(AutoModel $autoModel)
+    public function show(AutoType $autoType)
     {
         //
     }
@@ -52,10 +52,10 @@ class AutoModelController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\AutoModel $autoModel
+     * @param  \App\Models\BrandType  $brandType
      * @return \Illuminate\Http\Response
      */
-    public function edit(AutoModel $autoModel)
+    public function edit(AutoType $autoType)
     {
         //
     }
@@ -64,10 +64,10 @@ class AutoModelController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\AutoModel $autoModel
+     * @param  \App\Models\AutoType $autoType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AutoModel $autoModel)
+    public function update(Request $request, AutoType $autoType)
     {
         //
     }
@@ -75,10 +75,10 @@ class AutoModelController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\CarModel  $carModel
+     * @param  \App\Models\BrandType  $brandType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AutoModel $autoModel)
+    public function destroy(AutoType $autoType)
     {
         //
     }

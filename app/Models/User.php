@@ -76,4 +76,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->belongsTo(Country::class, 'country_id', 'id');
     }
+
+    public function autos()
+    {
+        return $this->belongsToMany(AutoModel::class, 'auto_model_user', 'auto_model_id', 'user_id');
+    }
 }

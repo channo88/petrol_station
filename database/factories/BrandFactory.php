@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Brand;
+use App\Models\BrandType;
 use App\Models\City;
 use App\Models\Country;
 use App\Models\Town;
@@ -27,7 +28,8 @@ class BrandFactory extends Factory
         $town = Town::inRandomOrder()->first();
         return [
             'cif' => $this->faker->vat,
-            'name' => $this->faker->lastName,
+            'trade_name' => $this->faker->name,
+            'fiscal_name' => $this->faker->lastName,
             'street' => $this->faker->streetAddress,
             'town_id' => $town->id,
             'city_id' => $town->city->id,

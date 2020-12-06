@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FuelType extends Model
+class AutoType extends Model
 {
     use HasFactory;
 
@@ -13,4 +13,8 @@ class FuelType extends Model
         'name'
     ];
 
+    public function brands()
+    {
+        return $this->hasMany(Brand::class, 'brand_id', 'id');
+    }
 }

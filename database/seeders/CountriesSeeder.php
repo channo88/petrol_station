@@ -17,13 +17,13 @@ class CountriesSeeder extends Seeder
         Country::create([
             'iso_code' => 'ES',
             'iso_code_3' => 'ES1',
-            'name' => 'españa',
-            'capital' => 'madrid',
+            'name' => 'España',
+            'capital' => 'Madrid',
             'country_numeric_prefix' => '34',
             'lang_code' => 'es',
-            'lang_name' => 'español',
+            'lang_name' => 'Español',
             'currency_code' => '1',
-            'currency_name' => 'euro',
+            'currency_name' => 'Euro',
             'currency_symbol' => '€',
         ]);
     }

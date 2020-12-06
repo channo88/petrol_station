@@ -15,8 +15,7 @@ class CreateFuelsTable extends Migration
     {
         Schema::create('fuels', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('type_id');
-            $table->foreign('type_id')->references('id')->on('fuel_types')->onDelete('cascade');
+            $table->foreignId('type_id')->constrained('fuel_types')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name', 100)->nullable(false)->default('Sin Plomo X');
             $table->timestamps();
         });

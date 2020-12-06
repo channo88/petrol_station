@@ -15,10 +15,9 @@ class CreateTownsTable extends Migration
     {
         Schema::create('towns', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('city_id');
-            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
-            $table->string('name', 100)->nullable()->default('text');
-            $table->unsignedMediumInteger('postal_code');
+            $table->foreignId('city_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->string('name', 100)->nullable();
+            $table->string('postal_code', 6)->nullable(false);
             $table->timestamps();
         });
     }

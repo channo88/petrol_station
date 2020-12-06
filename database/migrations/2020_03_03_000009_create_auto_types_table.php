@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMotoModelsTable extends Migration
+class CreateAutoTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateMotoModelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('moto_models', function (Blueprint $table) {
+        Schema::create('auto_types', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 100)->nullable(false)->default('Brand Type X');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateMotoModelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('moto_models');
+        Schema::dropIfExists('auto_types');
     }
 }
