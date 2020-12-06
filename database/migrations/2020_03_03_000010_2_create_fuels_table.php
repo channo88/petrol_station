@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBrandsTable extends Migration
+class CreateFuelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateBrandsTable extends Migration
      */
     public function up()
     {
-        Schema::create('brands', function (Blueprint $table) {
+        Schema::create('fuels', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('type_id');
+            $table->foreign('type_id')->references('id')->on('fuel_types')->onDelete('cascade');
+            $table->string('name', 100)->nullable(false)->default('Sin Plomo X');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateBrandsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('brands');
+        Schema::dropIfExists('fuels');
     }
 }
