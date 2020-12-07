@@ -29,6 +29,8 @@ class UserFactory extends Factory
             'dni' => $this->faker->dni,
             'name' => $this->faker->firstName,
             'surname' => $this->faker->lastName,
+            'street' => $this->faker->streetAddress,
+            'mobile_phone' => $this->faker->e164PhoneNumber,
             'town_id' => $town->id,
             'city_id' => $town->city->id,
             'country_id' => $town->city->country->id,
